@@ -1,36 +1,36 @@
 const app = new Vue({
-  el: "#app",
+  el: '#app', 
   data: {
-    bobby: {
-      first: "Bobby",
-      last: "Boone",
-      age: 25
-    },
-    john: {
-      first: "John",
-      last: "Boone",
-      age: 35,
-    }
+    humphrey: {
+    first: 'humphrey',
+    last: 'baby',
+    age: 7
+  }, jimmy: {
+    name: 'jimmy',
+    age: 25
+  }
   },
   computed: {
-    johnAgeInOneYear() {
-      return this.john.age + 1;
+    humphreyFullName(){
+      return `${this.humphrey.last} ${this.humphrey.first}` // outputs baby humphrey
     }
   },
   filters: {
-    ageInOneYear(age) {
+    ageInOneYear(age){
       return age + 1;
     },
-    fullName(value) {
-      return `${value.last}, ${value.first}`;
+    theFullName(val){
+      return `${val.first} ${val.last}`
     }
   },
-  template: `
-    <div>
-      <h2>Name: {{john | fullName}}</h2>
-      <h2>Age: {{john.age | ageInOneYear}}</h2>
-      <h2>Name: {{bobby | fullName}}</h2>
-      <h2>Age: {{bobby.age | ageInOneYear}}</h2>
-    </div>
-  `
+  template: `<div>
+  <h3>hello friend</h3>
+  <h5> hola </h5>
+  <h5> First Name: {{ humphrey.first }} </h5> 
+  <h5> Full Name from filter object: {{ humphrey | theFullName }} </h5> 
+  <h5> Age: {{ humphrey.age }} </h5>
+  <h5> Humphrey's full name: {{ humphreyFullName() }} </h5>
+  </div>` // think of TEMPLATE as RENDER, can only return ONE ROOT ELEMENT TAG
+  //  'MUSTACHE' syntax for rendering JAVASCRIPT in HTML
+  // retrieves from 'data' object
 })
