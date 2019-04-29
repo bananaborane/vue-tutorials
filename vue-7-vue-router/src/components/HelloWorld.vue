@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <Module1 />
+    <Module2 />
+    <!-- RENDERS MODULE1 AND MODULE2 FROM components object -->
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -21,8 +24,15 @@
 </template>
 
 <script>
+import Module1 from './Module1'
+import Module2 from './Module2'
+
 export default {
   name: 'HelloWorld',
+  components: {
+    Module1,
+    Module2
+  }
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
