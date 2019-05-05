@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>My Friends</h1>
-    <li v-for="friend in FriendStore.friends">{{friend}}</li>
+    <li v-for="friend in FriendStore.friends">{{friend}}</li> 
+    <!-- V-FOR DIRECTIVE IS 'MAPPING' THROUGH FRIENDS -->
     <input v-model="newFriend" v-on:keyup.13="addFriend(newFriend)" />
   </div>
 </template>

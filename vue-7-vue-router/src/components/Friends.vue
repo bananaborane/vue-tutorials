@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Friends</h1>
+    <h1>From Friends.vue</h1>
     {{id}}
     {{age}}
     {{weight}}

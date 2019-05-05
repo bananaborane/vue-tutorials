@@ -10,7 +10,7 @@ import FriendStore from "../stores/FriendStore"
 export default {
   data() {
     return {
-      FriendStore: FriendStore.data
+      FriendStore: FriendStore.data // listens to the FriendStore array
     };
   },
 }

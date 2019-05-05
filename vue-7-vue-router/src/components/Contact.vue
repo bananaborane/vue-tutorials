@@ -1,5 +1,5 @@
 <template>
-  <h1>Contact Us</h1>
+  <h1>From Contact.Vue</h1>
 </template>
 
 <script>
